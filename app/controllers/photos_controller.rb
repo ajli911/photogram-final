@@ -22,8 +22,7 @@ class PhotosController < ApplicationController
   def create
     the_photo = Photo.new
     the_photo.caption = params.fetch("query_caption")
-    the_photo.upload = params.fetch("query_image")
-    the_photo.image = nil
+    the_photo.image = params.fetch("query_image")
     the_photo.owner_id = current_user.id
     the_photo.comments_count = 0
     the_photo.likes_count = 0

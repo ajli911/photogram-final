@@ -7,7 +7,6 @@
 #  comments_count :integer
 #  image          :string
 #  likes_count    :integer
-#  upload         :string
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  owner_id       :integer
@@ -17,6 +16,6 @@ class Photo < ApplicationRecord
   has_many  :comments, class_name: "Comment", foreign_key: "photo_id", dependent: :destroy
   has_many  :likes, class_name: "Like", foreign_key: "photo_id", dependent: :destroy
 
-  mount_uploader :upload, UploadUploader
+  mount_uploader :image, ImageUploader
 
 end

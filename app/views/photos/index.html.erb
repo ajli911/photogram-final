@@ -62,11 +62,7 @@
       <% @list_of_photos.each do |a_photo| %>
       <tr>
         <td>
-          <% if a_photo.image == nil %>
-            <img src = "<%= a_photo.upload %>" class="img-responsive"/>
-          <% else %>
-            <img src = "<%= a_photo.image %>"/>
-          <% end %>
+          <img src = "<%= a_photo.image %>" class="img-responsive"/>
         </td>
 
         <td>
