@@ -14,15 +14,15 @@
         <td><%= user.username%></td>
         <td>
           <% if user.private == true %>
-            <p>Yes</p>
+            Yes
           <% else %>
-            <p>No</p>
+            No
           <% end %>
         </td>
         <td>
           <% if current_user == nil %>
           <% else %>
-            <p> follow </p>
+            follow
           <% end %>
         </td>
         <td><a href = "/users/<%=user.username%>">Show details</a></td>
