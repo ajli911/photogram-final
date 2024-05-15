@@ -31,4 +31,5 @@ class User < ApplicationRecord
   has_many  :comments, class_name: "Comment", foreign_key: "author_id", dependent: :destroy
   has_many  :receivedfollowrequests, class_name: "FollowRequest", foreign_key: "recipient_id", dependent: :destroy
   has_many  :sentfollowrequests, class_name: "FollowRequest", foreign_key: "sender_id", dependent: :destroy
+  
 end
