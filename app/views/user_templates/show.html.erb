@@ -1,0 +1,35 @@
+<h1><%= @the_user.username %></h1>
+
+<div>
+  <dl>
+    <dt>Private</dt>
+      <dd><%= @the_user.private.to_s%></dd>
+    <dt>Followers</dt>
+      <dd>follow count</dd>
+    <dt>Following</dt>
+      <dd>following count</dd>
+  </dl>
+</div>
+
+<div>
+  <ul>
+    <li><a href = "/users/<%= @the_user.username %>">Profile</a></li>
+    <li><a href = "/users/<%= @the_user.username %>/liked_photos">Liked photos</a></li>
+    <li><a href = "/users/<%= @the_user.username %>/feed">Feed</a></li>
+    <li><a href = "/users/<%= @the_user.username %>/discover">Discover</a></li>
+  </ul>
+</div>
+
+<div>
+  <h2>Own photos (photo count here)</h2>
+  <table border = "1">
+    <tr>
+      <th>Image</th>
+      <th>Owner</th>
+      <th>Caption</th>
+      <th>Posted</th>
+      <th>Likes</th>
+      <th></th>
+    </tr>
+  </table>
+</div>

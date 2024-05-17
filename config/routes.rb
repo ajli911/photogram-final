@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   root "users#index"
 
-  get("/users", { :controller => "users", :action => "index"})
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:path_username", { :controller => "users", :action => "show" })
   # Routes for the Photo resource:
 
   # CREATE
